@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+.navbar{
+  position: fixed;
+    width: 100%;
+    background: deepskyblue;
+    padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+  padding-left: 30px;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.logo a:hover{
+  letter-spacing: 8px;
+}
+.navbar-menu{
+    padding-right: 30px;
+}
+.link-button{
+  border-radius: 35px;
+  border: 1px solid white;
+  padding: 5px 30px;
+  background-color: white;
+  margin: 15px;
+  color: deepskyblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+.link-button:hover{
+  padding: 10px 30px;
+  font-size: large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button-custom{
+    background: deepskyblue;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.button-custom:hover {
+    background: #014a9c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.home-page{
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.login-page{
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.register-page{
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.card-auth{
+  width: 300px;
+  border: 1px solid deepskyblue;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 40px;
 }
-
-.App-link {
-  color: #61dafb;
+.card-auth .names{
+  display: flex;
+  justify-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-auth input{
+  width: 100%;
+  background: deepskyblue;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
 }
