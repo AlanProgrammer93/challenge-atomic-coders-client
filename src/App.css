@@ -101,6 +101,9 @@
   display: flex;
   justify-content: center;
 }
+.names input{
+  margin-right: 5px;
+}
 .card-auth input{
   width: 100%;
   background: deepskyblue;

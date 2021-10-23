@@ -26,7 +26,6 @@ const Register = ({history}) => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-       
        try {
         const {data} = await clientAxios.post(`/register`, form);
         console.log(data);
