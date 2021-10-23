@@ -47,6 +47,7 @@ const Register = ({history}) => {
             }
             });
             localStorage.setItem('token', data.token)
+            localStorage.setItem('user', JSON.stringify(data.user))
           history.push('/');
        } catch (error) {
             Swal.fire('Error', 'Mail already exists', 'error');
@@ -60,7 +61,7 @@ const Register = ({history}) => {
             form.lastName.length > 0 &&
             form.email.length > 0 &&
             form.password.length > 5 &&
-            form.password == form.password2 
+            form.password === form.password2 
         ) ? true : false;
     }
 

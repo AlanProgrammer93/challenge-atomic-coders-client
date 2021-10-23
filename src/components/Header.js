@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-    //const [user, setUser] = useState(false);
-
     const {user} = useSelector((state) => ({ ...state }));
     let dispatch = useDispatch();
 
     const logout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('user');
+
         dispatch({
             type: 'LOGOUT',
             payload: null
@@ -23,9 +23,9 @@ const Header = () => {
             </div>
             {
                 user ? (
-                    <div className="navbar-menu">
-                        {user.name}
-                        <Link className="link-button" onClick={logout} to="#">Cerrar</Link>
+                    <div className="navbar-menu" style={{color: 'white', fontWeight: 'bold'}}>
+                        {user?.name} {user?.lastName}
+                        <Link className="link-button" onClick={logout} to="#">Close</Link>
                     </div>
                 ) : (
                     <div className="navbar-menu">
